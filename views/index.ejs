@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EngageMe</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to EngageMe!</h1>
+    <form action="/" class="form" method="POST">
+        <select name="type">
+            <!-- <option value="" data-display="select">Select one</option>
+            <option value="Try a New Recipe">Try a New Recipe </option>
+            <option value="Photo Scavenger Hunt">Photo Scavenger Hunt</option>
+            <option value="Outdoor Picnic">Outdoor Picnic</option>
+            <option value="Board Game Night">Board Game Night</option>
+            <option value="Nature Walk">Nature Walk</option>
+            <option value="DIY Craft Project">DIY Craft Project</option>
+            <option value="Trivia Challenge">Trivia Challenge</option> -->
+            <option value="" data-display="Select">Select one type</option>
+        <option value="education">Education</option>
+        <option value="charity">Charity</option>
+        <option value="recreational">Recreational</option>
+        <option value="relaxation">Relaxation</option>
+        <option value="busywork">Busywork</option>
+        <option value="social">Social</option>
+        <option value="diy">DIY</option>
+        <option value="music">Music</option>
+        </select>
+        <select name="participants">
+            <!-- <option value="" data-display="select">Select one</option>
+            <option value="1">Person 1</option>
+            <option value="2">Person 2</option>
+            <option value="3">Person 3</option>
+            <option value="4">Person 4</option>
+            <option value="5">Person 5</option> -->
+            <option value="">Participants</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        </select>
+        <button type="submit" class="form-submit">Go</button>
+    </form>
+
+    <section class="cards">
+        <% if(locals.data){ %>
+            <article class="card-item">
+                <h2 class="card-activity">
+                    <%= data.activity %>
+                </h2>
+                <div class="card-info">
+                    <span><%= data.type %></span>
+                    <br>
+                    <span>Participants: <%= data.participants %></span>
+                </div>
+            </article>
+            <% } %>
+
+                <% if(locals.error) {%>
+                 <div class="tag-error">
+                    <%= error %>
+                </div>    
+                <% } %>
+            
+    </section>
+</div>
+</body>
+</html>
