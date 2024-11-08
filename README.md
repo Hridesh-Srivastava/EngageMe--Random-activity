@@ -29,7 +29,7 @@ npm install
 ```
 npm run dev
 ```
-5. Open your browser and go to <pre> http://localhost:3000 </pre> to view the app.
+5. Open your browser and go to <code> http://localhost:3000 </code> to view the app.
    
 ## Contributions:
 Contributions are welcome! If you’d like to improve EngageMe or suggest new features, feel free to submit a pull request. Please make sure to fork the repository and follow best practices for coding and documentation.
